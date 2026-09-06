@@ -1,10 +1,12 @@
 import { useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowDown, ArrowRight, ExternalLink, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const SOURCE_URL =
   "https://github.com/luckyjaiswal1130-dotcom/Techsense-project/blob/master/simulation-code-5d.html";
+
+const RUN_URL = "https://onecompiler.com/html#draft-x5ce";
 
 /* ------------------------------------------------------------------ */
 /* Archival primitives                                                 */
@@ -821,6 +823,12 @@ export default function Landing() {
               <a href={SOURCE_URL} target="_blank" rel="noopener noreferrer">
                 Open the source file
                 <ExternalLink className="size-4" />
+              </a>
+            </Button>
+            <Button asChild variant="outline" className="gap-2 rounded-sm border-oxblood/40 bg-transparent font-serif text-[15px] text-oxblood transition-colors hover:bg-oxblood hover:text-[color:var(--paper)]">
+              <a href={RUN_URL} target="_blank" rel="noopener noreferrer">
+                Run the test yourself
+                <Play className="size-4" />
               </a>
             </Button>
           </div>
