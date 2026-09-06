@@ -74,13 +74,13 @@ function FlatLatticeFigure() {
   const dots: ReactNode[] = [];
   for (let r = 0; r <= rows; r++)
     for (let c = 0; c <= cols; c++)
-      dots.push(<circle key={`${r}-${c}`} cx={x0 + c * s} cy={y0 + r * s} r={1.7} fill="#2e2417" opacity={0.75} />);
+      dots.push(<circle key={`${r}-${c}`} cx={x0 + c * s} cy={y0 + r * s} r={1.7} fill="#c9dcef" opacity={0.75} />);
   return (
     <svg viewBox="0 0 236 140" className="mx-auto w-full max-w-sm" role="img" aria-label="Uniform cubic lattice of nodes and edges">
-      <path d={h.join(" ")} stroke="#8a7a5c" strokeWidth="1" fill="none" opacity="0.6" />
-      <path d={v.join(" ")} stroke="#8a7a5c" strokeWidth="1" fill="none" opacity="0.6" />
+      <path d={h.join(" ")} stroke="#5f7d92" strokeWidth="1" fill="none" opacity="0.6" />
+      <path d={v.join(" ")} stroke="#5f7d92" strokeWidth="1" fill="none" opacity="0.6" />
       {dots}
-      <text x={x0 + cols * s - 40} y={y0 - 3} fontSize="8" fill="#8a7a5c" fontStyle="italic">
+      <text x={x0 + cols * s - 40} y={y0 - 3} fontSize="8" fill="#5f7d92" fontStyle="italic">
         every edge equal — no mass, no curve
       </text>
     </svg>
@@ -99,24 +99,24 @@ function WarpSheetFigure() {
     const y = top + (i * (bottom - top)) / (rowsH.length - 1);
     let d = `M 14 ${y}`;
     for (let x = 14; x <= W - 14; x += 7) d += ` L ${x} ${y + dip(x, (bottom - y) * 0.5 + 4)}`;
-    return <path key={i} d={d} stroke="#8a7a5c" strokeWidth="1" fill="none" opacity="0.62" />;
+    return <path key={i} d={d} stroke="#5f7d92" strokeWidth="1" fill="none" opacity="0.62" />;
   });
   const vert: ReactNode[] = [];
   for (let x = 14; x <= W - 14; x += 24)
     vert.push(
-      <path key={x} d={`M ${x} ${top} L ${cx + (x - cx) * 0.82} ${bottom + dip(x, 10)}`} stroke="#8a7a5c" strokeWidth="1" fill="none" opacity="0.45" />,
+      <path key={x} d={`M ${x} ${top} L ${cx + (x - cx) * 0.82} ${bottom + dip(x, 10)}`} stroke="#5f7d92" strokeWidth="1" fill="none" opacity="0.45" />,
     );
   return (
     <svg viewBox="0 0 260 160" className="mx-auto w-full max-w-md" role="img" aria-label="The same lattice sagging into a gravity well">
       {vert}
       {horiz}
-      <circle cx={cx} cy={bottom + 22} r={9} fill="#7a2e21" />
-      <path d={`M ${cx + 26} ${bottom - 34} L ${cx + 26} ${bottom + 6}`} stroke="#2e2417" strokeWidth="1" strokeDasharray="3 3" />
-      <path d={`M ${cx + 22} ${bottom - 30} L ${cx + 26} ${bottom - 36} L ${cx + 30} ${bottom - 30}`} stroke="#2e2417" strokeWidth="1" fill="none" />
-      <text x={cx + 32} y={bottom - 12} fontSize="9" fill="#2e2417" fontStyle="italic">
+      <circle cx={cx} cy={bottom + 22} r={9} fill="#38e1ff" />
+      <path d={`M ${cx + 26} ${bottom - 34} L ${cx + 26} ${bottom + 6}`} stroke="#c9dcef" strokeWidth="1" strokeDasharray="3 3" />
+      <path d={`M ${cx + 22} ${bottom - 30} L ${cx + 26} ${bottom - 36} L ${cx + 30} ${bottom - 30}`} stroke="#c9dcef" strokeWidth="1" fill="none" />
+      <text x={cx + 32} y={bottom - 12} fontSize="9" fill="#c9dcef" fontStyle="italic">
         w
       </text>
-      <text x={cx - 78} y={top - 4} fontSize="8" fill="#8a7a5c" fontStyle="italic">
+      <text x={cx - 78} y={top - 4} fontSize="8" fill="#5f7d92" fontStyle="italic">
         mass opens the gate — the fabric dips
       </text>
     </svg>
@@ -133,18 +133,18 @@ function ThresholdCurveFigure() {
   }
   return (
     <svg viewBox="0 0 250 140" className="mx-auto w-full max-w-sm" role="img" aria-label="Sigmoid threshold gate over the potential ratio">
-      <rect x={120} y={12} width={104} height={110} fill="#7a2e21" opacity="0.07" />
-      <path d={`M ${pts.join(" L ")}`} stroke="#7a2e21" strokeWidth="1.6" fill="none" />
-      <path d="M 26 12 V 122 H 230" stroke="#8a7a5c" strokeWidth="1" fill="none" />
-      <path d="M 120 12 V 122" stroke="#2e2417" strokeWidth="1" strokeDasharray="4 3" opacity="0.7" />
-      <circle cx={120} cy={79} r={3} fill="#2e2417" />
-      <text x={124} y={133} fontSize="9" fill="#2e2417" fontStyle="italic">
+      <rect x={120} y={12} width={104} height={110} fill="#38e1ff" opacity="0.07" />
+      <path d={`M ${pts.join(" L ")}`} stroke="#38e1ff" strokeWidth="1.6" fill="none" />
+      <path d="M 26 12 V 122 H 230" stroke="#5f7d92" strokeWidth="1" fill="none" />
+      <path d="M 120 12 V 122" stroke="#c9dcef" strokeWidth="1" strokeDasharray="4 3" opacity="0.7" />
+      <circle cx={120} cy={79} r={3} fill="#c9dcef" />
+      <text x={124} y={133} fontSize="9" fill="#c9dcef" fontStyle="italic">
         Φ₀ — the half-open point
       </text>
-      <text x={160} y={26} fontSize="8" fill="#7a2e21" fontStyle="italic">
+      <text x={160} y={26} fontSize="8" fill="#38e1ff" fontStyle="italic">
         gate opening
       </text>
-      <text x={30} y={26} fontSize="8" fill="#8a7a5c" fontStyle="italic">
+      <text x={30} y={26} fontSize="8" fill="#5f7d92" fontStyle="italic">
         flat: gate shut
       </text>
     </svg>
@@ -154,18 +154,18 @@ function ThresholdCurveFigure() {
 function DeflectionFigure() {
   return (
     <svg viewBox="0 0 250 140" className="mx-auto w-full max-w-md" role="img" aria-label="A light ray bending around a mass, with the extra Lucky wedge">
-      <circle cx={190} cy={70} r={11} fill="#7a2e21" />
-      <path d="M 8 112 Q 120 100 178 74 Q 214 56 244 40" stroke="#2e2417" strokeWidth="1.6" fill="none" />
-      <path d="M 8 112 L 244 66" stroke="#8a7a5c" strokeWidth="1" strokeDasharray="4 4" fill="none" />
-      <path d="M 190 70 L 244 70" stroke="#7a2e21" strokeWidth="1" strokeDasharray="2 3" fill="none" opacity="0.8" />
-      <path d="M 236 66 A 46 46 0 0 0 232 55" stroke="#7a2e21" strokeWidth="1.2" fill="none" />
-      <text x={214} y={82} fontSize="9" fill="#7a2e21" fontStyle="italic">
+      <circle cx={190} cy={70} r={11} fill="#38e1ff" />
+      <path d="M 8 112 Q 120 100 178 74 Q 214 56 244 40" stroke="#c9dcef" strokeWidth="1.6" fill="none" />
+      <path d="M 8 112 L 244 66" stroke="#5f7d92" strokeWidth="1" strokeDasharray="4 4" fill="none" />
+      <path d="M 190 70 L 244 70" stroke="#38e1ff" strokeWidth="1" strokeDasharray="2 3" fill="none" opacity="0.8" />
+      <path d="M 236 66 A 46 46 0 0 0 232 55" stroke="#38e1ff" strokeWidth="1.2" fill="none" />
+      <text x={214} y={82} fontSize="9" fill="#38e1ff" fontStyle="italic">
         θ
       </text>
-      <text x={96} y={92} fontSize="8" fill="#8a7a5c" fontStyle="italic">
+      <text x={96} y={92} fontSize="8" fill="#5f7d92" fontStyle="italic">
         undeflected, no mass
       </text>
-      <text x={150} y={124} fontSize="8" fill="#2e2417" fontStyle="italic">
+      <text x={150} y={124} fontSize="8" fill="#c9dcef" fontStyle="italic">
         Δ is the surplus over Einstein’s 4GM/c²b
       </text>
     </svg>
@@ -177,16 +177,16 @@ function OrbitRosterFigure() {
   return (
     <svg viewBox="0 0 240 150" className="mx-auto w-full max-w-md" role="img" aria-label="Concentric orbits of the simulated solar system">
       {rings.map((r, i) => (
-        <ellipse key={r} cx={120} cy={78} rx={r * 13.4} ry={r * 13.4 * 0.42} stroke="#8a7a5c" strokeWidth="0.8" strokeDasharray="3 4" fill="none" opacity={0.7 - i * 0.04} />
+        <ellipse key={r} cx={120} cy={78} rx={r * 13.4} ry={r * 13.4 * 0.42} stroke="#5f7d92" strokeWidth="0.8" strokeDasharray="3 4" fill="none" opacity={0.7 - i * 0.04} />
       ))}
-      <circle cx={120} cy={78} r={7} fill="#7a2e21" />
+      <circle cx={120} cy={78} r={7} fill="#38e1ff" />
       {rings.map((r, i) => {
         const a = (i * 2.4 + 0.6) % (Math.PI * 2);
         const x = 120 + Math.cos(a) * r * 13.4;
         const y = 78 + Math.sin(a) * r * 13.4 * 0.42;
-        return <circle key={r} cx={x} cy={y} r={2.4 - i * 0.12} fill="#2e2417" opacity={0.85} />;
+        return <circle key={r} cx={x} cy={y} r={2.4 - i * 0.12} fill="#c9dcef" opacity={0.85} />;
       })}
-      <text x={12} y={14} fontSize="8" fill="#8a7a5c" fontStyle="italic">
+      <text x={12} y={14} fontSize="8" fill="#5f7d92" fontStyle="italic">
         Mercury r=2.0 … Neptune r=8.1 — v = √(GM/r)
       </text>
     </svg>
@@ -199,47 +199,47 @@ function SequenceStripFigure() {
     <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
       <figure className={panel}>
         <svg viewBox="0 0 100 84" className="w-full" role="img" aria-label="Two black holes spiralling together">
-          <circle cx={34} cy={44} r={8} fill="#2e2417" />
-          <circle cx={68} cy={40} r={6} fill="#2e2417" opacity={0.85} />
-          <path d="M 44 40 A 18 10 0 0 1 60 36" stroke="#7a2e21" strokeWidth="1.2" fill="none" strokeDasharray="3 2" />
-          <path d="M 60 48 A 18 10 0 0 1 44 50" stroke="#7a2e21" strokeWidth="1.2" fill="none" strokeDasharray="3 2" />
+          <circle cx={34} cy={44} r={8} fill="#c9dcef" />
+          <circle cx={68} cy={40} r={6} fill="#c9dcef" opacity={0.85} />
+          <path d="M 44 40 A 18 10 0 0 1 60 36" stroke="#38e1ff" strokeWidth="1.2" fill="none" strokeDasharray="3 2" />
+          <path d="M 60 48 A 18 10 0 0 1 44 50" stroke="#38e1ff" strokeWidth="1.2" fill="none" strokeDasharray="3 2" />
         </svg>
         <figcaption className="caps-label mt-1.5 text-center">I · Inspiral</figcaption>
       </figure>
       <figure className={panel}>
         <svg viewBox="0 0 100 84" className="w-full" role="img" aria-label="Merger flash with ripple and rays">
-          <circle cx={50} cy={42} r={9} fill="#2e2417" />
+          <circle cx={50} cy={42} r={9} fill="#c9dcef" />
           {Array.from({ length: 10 }).map((_, i) => {
             const a = (i / 10) * Math.PI * 2;
             return (
-              <path key={i} d={`M ${50 + Math.cos(a) * 12} ${42 + Math.sin(a) * 12} L ${50 + Math.cos(a) * 24} ${42 + Math.sin(a) * 24}`} stroke="#7a2e21" strokeWidth="1.3" />
+              <path key={i} d={`M ${50 + Math.cos(a) * 12} ${42 + Math.sin(a) * 12} L ${50 + Math.cos(a) * 24} ${42 + Math.sin(a) * 24}`} stroke="#38e1ff" strokeWidth="1.3" />
             );
           })}
-          <ellipse cx={50} cy={42} rx={32} ry={12} stroke="#8a7a5c" strokeWidth="1" fill="none" strokeDasharray="2 3" />
+          <ellipse cx={50} cy={42} rx={32} ry={12} stroke="#5f7d92" strokeWidth="1" fill="none" strokeDasharray="2 3" />
         </svg>
         <figcaption className="caps-label mt-1.5 text-center">II · Merger burst</figcaption>
       </figure>
       <figure className={panel}>
         <svg viewBox="0 0 100 84" className="w-full" role="img" aria-label="A star stretched toward a black hole">
-          <circle cx={72} cy={44} r={9} fill="#2e2417" />
-          <ellipse cx={38} cy={44} rx={16} ry={5.5} fill="#7a2e21" opacity={0.85} />
+          <circle cx={72} cy={44} r={9} fill="#c9dcef" />
+          <ellipse cx={38} cy={44} rx={16} ry={5.5} fill="#38e1ff" opacity={0.85} />
           {[
             [52, 40],
             [57, 46],
             [61, 42],
             [55, 50],
           ].map(([x, y], i) => (
-            <circle key={i} cx={x} cy={y} r={1.4} fill="#7a2e21" opacity={0.8} />
+            <circle key={i} cx={x} cy={y} r={1.4} fill="#38e1ff" opacity={0.8} />
           ))}
         </svg>
         <figcaption className="caps-label mt-1.5 text-center">III · Tidal tear</figcaption>
       </figure>
       <figure className={panel}>
         <svg viewBox="0 0 100 84" className="w-full" role="img" aria-label="A light beam captured at the event horizon">
-          <circle cx={64} cy={44} r={10} fill="#2e2417" />
-          <path d="M 6 66 Q 40 62 56 52" stroke="#2e2417" strokeWidth="1.5" fill="none" />
-          <path d="M 56 52 L 64 44" stroke="#8a7a5c" strokeWidth="1" strokeDasharray="2 3" fill="none" />
-          <text x={8} y={22} fontSize="8" fill="#8a7a5c" fontStyle="italic">
+          <circle cx={64} cy={44} r={10} fill="#c9dcef" />
+          <path d="M 6 66 Q 40 62 56 52" stroke="#c9dcef" strokeWidth="1.5" fill="none" />
+          <path d="M 56 52 L 64 44" stroke="#5f7d92" strokeWidth="1" strokeDasharray="2 3" fill="none" />
+          <text x={8} y={22} fontSize="8" fill="#5f7d92" fontStyle="italic">
             beam cut at the horizon
           </text>
         </svg>
@@ -258,17 +258,17 @@ function HawkingCurveFigure() {
   }
   return (
     <svg viewBox="0 0 250 140" className="mx-auto w-full max-w-sm" role="img" aria-label="Hawking temperature rises as mass falls">
-      <path d={`M ${pts.join(" L ")}`} stroke="#7a2e21" strokeWidth="1.6" fill="none" />
-      <path d="M 26 12 V 122 H 230" stroke="#8a7a5c" strokeWidth="1" fill="none" />
-      <circle cx={210} cy={102} r={7} fill="#2e2417" />
-      <text x={188} y={94} fontSize="8" fill="#2e2417" fontStyle="italic">
+      <path d={`M ${pts.join(" L ")}`} stroke="#38e1ff" strokeWidth="1.6" fill="none" />
+      <path d="M 26 12 V 122 H 230" stroke="#5f7d92" strokeWidth="1" fill="none" />
+      <circle cx={210} cy={102} r={7} fill="#c9dcef" />
+      <text x={188} y={94} fontSize="8" fill="#c9dcef" fontStyle="italic">
         heavy — cold
       </text>
-      <circle cx={44} cy={40} r={2.6} fill="#7a2e21" />
-      <text x={52} y={38} fontSize="8" fill="#7a2e21" fontStyle="italic">
+      <circle cx={44} cy={40} r={2.6} fill="#38e1ff" />
+      <text x={52} y={38} fontSize="8" fill="#38e1ff" fontStyle="italic">
         small — white-hot
       </text>
-      <text x={116} y={134} fontSize="8" fill="#2e2417" fontStyle="italic">
+      <text x={116} y={134} fontSize="8" fill="#c9dcef" fontStyle="italic">
         T_H ∝ 1 / M
       </text>
     </svg>
@@ -360,10 +360,10 @@ function ThresholdInstrument() {
       </div>
       <div className="flex flex-col justify-between gap-5">
         <svg viewBox="0 0 250 140" className="w-full" role="img" aria-label="The gate curve with the current point marked">
-          <path d={`M ${curvePts.join(" L ")}`} stroke="#7a2e21" strokeWidth="1.6" fill="none" />
-          <path d="M 28 12 V 122 H 228" stroke="#8a7a5c" strokeWidth="1" fill="none" />
-          <path d={`M ${markerX} 12 V 122`} stroke="#2e2417" strokeWidth="1" strokeDasharray="4 3" opacity="0.75" />
-          <circle cx={markerX} cy={122 - f * 92} r={3.4} fill="#2e2417" />
+          <path d={`M ${curvePts.join(" L ")}`} stroke="#38e1ff" strokeWidth="1.6" fill="none" />
+          <path d="M 28 12 V 122 H 228" stroke="#5f7d92" strokeWidth="1" fill="none" />
+          <path d={`M ${markerX} 12 V 122`} stroke="#c9dcef" strokeWidth="1" strokeDasharray="4 3" opacity="0.75" />
+          <circle cx={markerX} cy={122 - f * 92} r={3.4} fill="#c9dcef" />
         </svg>
         <dl className="grid grid-cols-3 gap-3 border-t border-[color:var(--rule)] pt-4">
           <div>

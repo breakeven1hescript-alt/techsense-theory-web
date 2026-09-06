@@ -41,10 +41,10 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* Vintage theme tokens */
+/* Sci-fi theme tokens */
 @theme inline {
-  --font-serif: "EB Garamond", "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+  --font-serif: "Exo 2", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Share Tech Mono", "Courier New", monospace;
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-ink-faint: var(--ink-faint);
@@ -57,86 +57,86 @@
   --color-verdigris: var(--verdigris);
 }
 
-/* CHANGE VALUES FOR THEME — Vintage: aged paper, sepia ink, oxblood accent */
+/* CHANGE VALUES FOR THEME — Sci-fi: deep space navy, cyan HUD glow, violet secondary */
 :root {
-  --radius: 0.125rem;
-  --background: #ece3d0;
-  --foreground: #2e2417;
-  --card: #f3ecdb;
-  --card-foreground: #2e2417;
-  --popover: #f3ecdb;
-  --popover-foreground: #2e2417;
-  --primary: #7a2e21;
-  --primary-foreground: #f5eedd;
-  --secondary: #ddd0b4;
-  --secondary-foreground: #4a3a24;
-  --muted: #e2d7bf;
-  --muted-foreground: #6f6046;
-  --accent: #d9c9a3;
-  --accent-foreground: #4a3a24;
-  --destructive: #8c2f24;
-  --border: #c9b891;
-  --input: #c9b891;
-  --ring: #7a2e21;
-  --chart-1: #7a2e21;
-  --chart-2: #4a5a3a;
-  --chart-3: #8a6d3b;
-  --chart-4: #55636e;
-  --chart-5: #9c7c3c;
-  --sidebar: #f3ecdb;
-  --sidebar-foreground: #2e2417;
-  --sidebar-primary: #7a2e21;
-  --sidebar-primary-foreground: #f5eedd;
-  --sidebar-accent: #ddd0b4;
-  --sidebar-accent-foreground: #4a3a24;
-  --sidebar-border: #c9b891;
-  --sidebar-ring: #7a2e21;
+  --radius: 0.25rem;
+  --background: #070b16;
+  --foreground: #dbe9f7;
+  --card: #0d1424;
+  --card-foreground: #dbe9f7;
+  --popover: #0d1424;
+  --popover-foreground: #dbe9f7;
+  --primary: #38e1ff;
+  --primary-foreground: #06121c;
+  --secondary: #16213a;
+  --secondary-foreground: #c9dcef;
+  --muted: #131d31;
+  --muted-foreground: #8fb3c9;
+  --accent: #1a2740;
+  --accent-foreground: #e3f1ff;
+  --destructive: #ff5d73;
+  --border: #24344f;
+  --input: #24344f;
+  --ring: #38e1ff;
+  --chart-1: #38e1ff;
+  --chart-2: #9d7bff;
+  --chart-3: #ff6ec7;
+  --chart-4: #46e3a1;
+  --chart-5: #ffc857;
+  --sidebar: #0d1424;
+  --sidebar-foreground: #dbe9f7;
+  --sidebar-primary: #38e1ff;
+  --sidebar-primary-foreground: #06121c;
+  --sidebar-accent: #1a2740;
+  --sidebar-accent-foreground: #e3f1ff;
+  --sidebar-border: #24344f;
+  --sidebar-ring: #38e1ff;
 
-  /* Vintage extras */
-  --ink: #2e2417;
-  --ink-soft: #5c4d33;
-  --ink-faint: #8a7a5c;
-  --paper: #ece3d0;
-  --paper-deep: #e2d6bc;
-  --paper-dark: #d8caa8;
-  --rule: #b7a375;
-  --oxblood: #7a2e21;
-  --seal: #96442c;
-  --verdigris: #4f6153;
+  /* Sci-fi extras (names kept from the old theme; values are deep-space) */
+  --ink: #dcecff;
+  --ink-soft: #9db8cd;
+  --ink-faint: #5f7d92;
+  --paper: #0a101f;
+  --paper-deep: #0e1729;
+  --paper-dark: #122036;
+  --rule: #24395a;
+  --oxblood: #38e1ff;
+  --seal: #9d7bff;
+  --verdigris: #46e3a1;
 }
 
 .dark {
-  --background: #241d12;
-  --foreground: #e8ddc4;
-  --card: #2c2416;
-  --card-foreground: #e8ddc4;
-  --popover: #2c2416;
-  --popover-foreground: #e8ddc4;
-  --primary: #c98a5e;
-  --primary-foreground: #241d12;
-  --secondary: #3a2f1e;
-  --secondary-foreground: #e8ddc4;
-  --muted: #3a2f1e;
-  --muted-foreground: #b3a281;
-  --accent: #3a2f1e;
-  --accent-foreground: #e8ddc4;
-  --destructive: #b5543f;
-  --border: #4a3c26;
-  --input: #4a3c26;
-  --ring: #c98a5e;
-  --chart-1: #c98a5e;
-  --chart-2: #7f9179;
-  --chart-3: #b09858;
-  --chart-4: #8296a3;
-  --chart-5: #a38a4e;
-  --sidebar: #2c2416;
-  --sidebar-foreground: #e8ddc4;
-  --sidebar-primary: #c98a5e;
-  --sidebar-primary-foreground: #241d12;
-  --sidebar-accent: #3a2f1e;
-  --sidebar-accent-foreground: #e8ddc4;
-  --sidebar-border: #4a3c26;
-  --sidebar-ring: #c98a5e;
+  --background: #070b16;
+  --foreground: #dbe9f7;
+  --card: #0d1424;
+  --card-foreground: #dbe9f7;
+  --popover: #0d1424;
+  --popover-foreground: #dbe9f7;
+  --primary: #38e1ff;
+  --primary-foreground: #06121c;
+  --secondary: #16213a;
+  --secondary-foreground: #c9dcef;
+  --muted: #131d31;
+  --muted-foreground: #8fb3c9;
+  --accent: #1a2740;
+  --accent-foreground: #e3f1ff;
+  --destructive: #ff5d73;
+  --border: #24344f;
+  --input: #24344f;
+  --ring: #38e1ff;
+  --chart-1: #38e1ff;
+  --chart-2: #9d7bff;
+  --chart-3: #ff6ec7;
+  --chart-4: #46e3a1;
+  --chart-5: #ffc857;
+  --sidebar: #0d1424;
+  --sidebar-foreground: #dbe9f7;
+  --sidebar-primary: #38e1ff;
+  --sidebar-primary-foreground: #06121c;
+  --sidebar-accent: #1a2740;
+  --sidebar-accent-foreground: #e3f1ff;
+  --sidebar-border: #24344f;
+  --sidebar-ring: #38e1ff;
 }
 
 @layer base {
@@ -152,16 +152,16 @@
     cursor: pointer;
   }
   ::selection {
-    background: #d9c9a3;
-    color: #2e2417;
+    background: #38e1ff;
+    color: #06121c;
   }
 }
 
 /* ------------------------------------------------------------------ */
-/* Vintage texture, distressing, and archival details                  */
+/* Sci-fi surface, starfield, and HUD details                          */
 /* ------------------------------------------------------------------ */
 
-/* Aged paper grain: layered radial vignette + fine fibre noise via SVG turbulence */
+/* Deep-space backdrop: starfield dots + faint cyan/violet nebula glows */
 .paper-grain {
   position: relative;
   background-color: var(--paper);
@@ -172,10 +172,15 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23p)' opacity='0.5'/%3E%3C/svg%3E");
-  background-size: 300px 300px;
-  opacity: 0.07;
-  mix-blend-mode: multiply;
+  background-image:
+    radial-gradient(1.2px 1.2px at 12% 18%, rgba(224, 244, 255, 0.85), transparent 100%),
+    radial-gradient(1px 1px at 44% 62%, rgba(224, 244, 255, 0.5), transparent 100%),
+    radial-gradient(1.4px 1.4px at 78% 34%, rgba(160, 220, 255, 0.7), transparent 100%),
+    radial-gradient(1px 1px at 90% 84%, rgba(224, 244, 255, 0.45), transparent 100%),
+    radial-gradient(1.1px 1.1px at 28% 88%, rgba(200, 180, 255, 0.6), transparent 100%);
+  background-size: 320px 320px;
+  background-repeat: repeat;
+  opacity: 0.55;
 }
 .paper-grain::after {
   content: "";
@@ -184,26 +189,25 @@
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(1200px 700px at 18% 8%, rgba(122, 46, 33, 0.05), transparent 60%),
-    radial-gradient(900px 600px at 85% 92%, rgba(90, 70, 40, 0.07), transparent 55%),
-    radial-gradient(140% 100% at 50% 50%, transparent 62%, rgba(60, 45, 22, 0.14) 100%);
+    radial-gradient(1200px 700px at 18% 0%, rgba(56, 225, 255, 0.07), transparent 60%),
+    radial-gradient(900px 600px at 85% 95%, rgba(157, 123, 255, 0.08), transparent 55%),
+    radial-gradient(140% 100% at 50% 50%, transparent 55%, rgba(2, 5, 12, 0.55) 100%);
 }
 
-/* Plate (card) surface: heavier card stock with subtle double-rule frame */
+/* HUD panel (card) surface: dark glass with cyan edge glow */
 .plate {
   background-color: var(--card);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23p)' opacity='0.5'/%3E%3C/svg%3E");
-  background-size: 300px 300px;
-  background-blend-mode: multiply;
+  background-image:
+    linear-gradient(180deg, rgba(56, 225, 255, 0.05), transparent 24%),
+    linear-gradient(0deg, rgba(157, 123, 255, 0.04), transparent 30%);
   border: 1px solid var(--rule);
   box-shadow:
-    inset 0 0 0 1px rgba(243, 236, 219, 0.65),
-    inset 0 0 24px rgba(120, 95, 55, 0.08),
-    0 1px 0 rgba(255, 252, 240, 0.5) inset,
-    0 2px 10px rgba(70, 52, 25, 0.12);
+    inset 0 1px 0 rgba(148, 200, 255, 0.08),
+    0 0 0 1px rgba(56, 225, 255, 0.04),
+    0 12px 40px rgba(2, 6, 16, 0.55);
 }
 
-/* Double keyline rule, as on old engraved plates */
+/* Double keyline rule, HUD console style */
 .rule-double {
   border-top: 1px solid var(--rule);
   position: relative;
@@ -220,7 +224,7 @@
   border-top: 1px solid color-mix(in srgb, var(--rule) 60%, transparent);
 }
 
-/* Small-caps archival label (like figure captions) */
+/* Small-caps telemetry label */
 .caps-label {
   font-family: var(--font-mono);
   font-size: 0.65rem;
@@ -229,21 +233,19 @@
   color: var(--ink-faint);
 }
 
-/* Rubber-stamp seal */
+/* Neon status chip */
 .stamp {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--oxblood);
+  border: 1px solid color-mix(in srgb, var(--oxblood) 70%, transparent);
   color: var(--oxblood);
   font-family: var(--font-mono);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  transform: rotate(-2deg);
-  opacity: 0.85;
-  box-shadow: inset 0 0 0 1px rgba(122, 46, 33, 0.25);
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='r'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='3'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0 0 0.4 1 1 1 1 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23r)'/%3E%3C/svg%3E");
-  mask-size: 120px 120px;
+  box-shadow:
+    0 0 18px rgba(56, 225, 255, 0.18),
+    inset 0 0 12px rgba(56, 225, 255, 0.08);
 }
 
 /* Ledger-style table row rules */
@@ -251,16 +253,16 @@
   border-bottom: 1px solid color-mix(in srgb, var(--rule) 45%, transparent);
 }
 
-/* Faded ink formula block */
+/* Terminal formula block */
 .ink-formula {
   font-family: var(--font-mono);
-  background: rgba(46, 36, 23, 0.055);
+  background: rgba(56, 225, 255, 0.05);
   border-left: 2px solid var(--oxblood);
   color: var(--ink);
-  box-shadow: inset 0 0 18px rgba(120, 95, 55, 0.07);
+  box-shadow: inset 0 0 24px rgba(56, 225, 255, 0.04);
 }
 
-/* Slight yellowed photo corner for ornament frames */
+/* HUD corner brackets for panel frames */
 .corner-ornament {
   position: relative;
 }
@@ -270,8 +272,8 @@
   position: absolute;
   width: 14px;
   height: 14px;
-  border-color: var(--ink-faint);
-  opacity: 0.7;
+  border-color: color-mix(in srgb, var(--oxblood) 75%, transparent);
+  opacity: 0.8;
 }
 .corner-ornament::before {
   top: -1px;
@@ -286,7 +288,7 @@
   border-right: 1px solid;
 }
 
-/* Drop cap for chapter openers */
+/* Drop cap for section openers */
 .dropcap::first-letter {
   float: left;
   font-family: var(--font-serif);
@@ -297,7 +299,7 @@
   color: var(--oxblood);
 }
 
-/* Worn underline for links, like faint pencil */
+/* Glowing underline for links */
 .ink-link {
   color: var(--oxblood);
   text-decoration: underline;
